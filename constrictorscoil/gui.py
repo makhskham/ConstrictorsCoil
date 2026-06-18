@@ -1,6 +1,6 @@
-import tkinter as tk
+﻿import tkinter as tk
 
-from snake.base import PointType, Pos
+from constrictorscoil.base import PointType, Pos
 
 
 class GameWindow(tk.Tk):

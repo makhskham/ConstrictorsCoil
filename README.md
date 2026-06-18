@@ -125,7 +125,7 @@ python -m pytest
 ConstrictorsCoil/
 ├── run.py               # entrypoint, CLI argument parsing
 ├── requirements.txt
-├── snake/
+├── constrictorscoil/
 │   ├── game.py          # game loop, config, modes
 │   ├── gui.py           # Tkinter rendering
 │   ├── base/

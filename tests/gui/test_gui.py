@@ -1,6 +1,6 @@
-from snake.base import Map, PointType, Pos
-from snake.game import GameConf
-from snake.gui import GameWindow
+﻿from constrictorscoil.base import Map, PointType, Pos
+from constrictorscoil.game import GameConf
+from constrictorscoil.gui import GameWindow
 
 
 def test_game_window():

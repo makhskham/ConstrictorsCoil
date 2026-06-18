@@ -1,6 +1,6 @@
-import argparse
+﻿import argparse
 
-from snake.solver.dqn.history import History
+from constrictorscoil.solver.dqn.history import History
 
 
 def main():

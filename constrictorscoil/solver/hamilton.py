@@ -1,6 +1,6 @@
-from snake.base import Direc
-from snake.solver.base import BaseSolver
-from snake.solver.path import PathSolver
+﻿from constrictorscoil.base import Direc
+from constrictorscoil.solver.base import BaseSolver
+from constrictorscoil.solver.path import PathSolver
 
 
 class _TableCell:

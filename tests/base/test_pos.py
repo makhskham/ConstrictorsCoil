@@ -1,4 +1,4 @@
-from snake.base import Direc, Pos
+﻿from constrictorscoil.base import Direc, Pos
 
 
 def test_init():

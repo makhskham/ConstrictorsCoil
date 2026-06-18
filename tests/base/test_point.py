@@ -1,4 +1,4 @@
-from snake.base import Point, PointType
+﻿from constrictorscoil.base import Point, PointType
 
 
 def test_init():

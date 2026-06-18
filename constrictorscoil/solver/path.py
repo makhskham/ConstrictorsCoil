@@ -1,9 +1,9 @@
-import random
+﻿import random
 import sys
 from collections import deque
 
-from snake.base import Direc, PointType
-from snake.solver.base import BaseSolver
+from constrictorscoil.base import Direc, PointType
+from constrictorscoil.solver.base import BaseSolver
 
 
 class _TableCell:

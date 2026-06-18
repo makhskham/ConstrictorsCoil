@@ -1,27 +1,28 @@
-import json
+﻿import json
 import os
 
 import numpy as np
 
 try:
-    import tensorflow as tf
+    import tensorflow.compat.v1 as tf
+    tf.disable_v2_behavior()
 except ImportError:
     print(
-        "*------------------------------------------------------------------------------*"
+        "*--------------------------------------------------------------------*"
     )
     print(
-        "| WARNING: Tensorflow 1.x is not installed. DQN testing will not be available. |"
+        "| WARNING: TensorFlow is not installed. DQN mode will not be available. |"
     )
     print(
-        "*------------------------------------------------------------------------------*"
+        "*--------------------------------------------------------------------*"
     )
 
-from snake.base import Direc, PointType, Pos
-from snake.solver.base import BaseSolver
-from snake.solver.dqn.history import History
-from snake.solver.dqn.logger import log
-from snake.solver.dqn.memory import Memory
-from snake.solver.dqn.snakeaction import SnakeAction
+from constrictorscoil.base import Direc, PointType, Pos
+from constrictorscoil.solver.base import BaseSolver
+from constrictorscoil.solver.dqn.history import History
+from constrictorscoil.solver.dqn.logger import log
+from constrictorscoil.solver.dqn.memory import Memory
+from constrictorscoil.solver.dqn.snakeaction import SnakeAction
 
 _DIR_LOG = "logs"
 

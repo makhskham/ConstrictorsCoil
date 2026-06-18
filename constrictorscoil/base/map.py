@@ -1,7 +1,7 @@
-import random
+﻿import random
 
-from snake.base.point import Point, PointType
-from snake.base.pos import Pos
+from constrictorscoil.base.point import Point, PointType
+from constrictorscoil.base.pos import Pos
 
 
 class Map:

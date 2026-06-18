@@ -1,5 +1,5 @@
-from snake.base import Direc, Map, PointType, Pos, Snake
-from snake.solver import HamiltonSolver
+﻿from constrictorscoil.base import Direc, Map, PointType, Pos, Snake
+from constrictorscoil.solver import HamiltonSolver
 
 
 def test_cycle():

@@ -1,6 +1,6 @@
-import pytest
+﻿import pytest
 
-from snake.base import Map, PointType, Pos
+from constrictorscoil.base import Map, PointType, Pos
 
 
 def test_init():
