@@ -7,7 +7,7 @@ from constrictorscoil.base import Direc, Map, PointType, Pos, Snake
 from constrictorscoil.gui import GameWindow
 
 # Add solver names to globals()
-from constrictorscoil.solver import DQNSolver, GreedySolver, HamiltonSolver
+from constrictorscoil.solver import DQNSolver, DQNTorchSolver, GreedySolver, HamiltonSolver, RLSolver
 
 
 @unique
