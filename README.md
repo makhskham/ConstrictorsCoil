@@ -4,7 +4,7 @@
 
 [![Project Presentation](https://img.shields.io/badge/Website-Behind_the_Scenes-blue)](https://aisnakegame.my.canva.site/)
 
-A Snake game AI built in Python, implementing four solvers ranging from classical graph algorithms to deep reinforcement learning. The Hamilton solver achieves near-perfect play, filling 99.9% of the map on average.
+An AI snake game built in Python, implementing four solvers ranging from classical graph algorithms to deep reinforcement learning. The Hamilton solver achieves near-perfect play, filling 99.9% of the map on average.
 
 > Not because it's a snake. Because every successful action literally constricts future possibilities. The snake isn't just growing. It is tightening the noose around itself.
 
