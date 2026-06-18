@@ -22,15 +22,17 @@ Two families of solvers are implemented: classical graph-search solvers that are
 
 ## Solvers
 
+Avg Length and Avg Steps measured over 1000 episodes (Hamilton, Greedy, DQN TF) and 50 episodes (RL pretrained). Max length is 64 on 8x8 and 36 on 6x6.
+
 | Solver | Grid | Strategy | Avg Length | Avg Steps |
 | :----: | :--: | :------: | :--------: | :-------: |
 | [Hamilton][doc-hamilton] | 8x8 | Hamiltonian cycle with shortcuts | 63.93 / 64 | 717.83 |
 | [Greedy][doc-greedy] | 8x8 | Shortest path with safety lookahead | 60.15 / 64 | 904.56 |
 | [DQN (TF)][doc-dqn] | 8x8 | Deep Q-Network (TensorFlow) | 24.44 / 64 | 131.69 |
-| DQN (PyTorch) | 8x8 | Double DQN, requires training | -- | -- |
-| RL (pretrained) | 6x6 | Double DQN, pretrained model included | -- | -- |
+| DQN (PyTorch) | 8x8 | Double DQN, requires training | untrained | untrained |
+| RL (pretrained) | 6x6 | Double DQN, pretrained model included | 19.32 / 36 | 79.42 |
 
-Results for the first three solvers averaged over 1000 episodes. The PyTorch DQN solver requires retraining -- see [Training](#training). The RL solver runs on a 6x6 grid using the included pretrained `rl_model.pt`.
+The Hamilton solver is 6% longer on average than Greedy, but uses 21% fewer steps, because shortcuts aggressively reduce wasted movement. The DQN solvers plateau well below the classical solvers -- credit assignment is hard when hundreds of steps separate each reward from the eventual collision.
 
 ---
 
@@ -78,23 +80,6 @@ The state vector has two components:
 - **Extra features (9):** one-hot current direction (4), one-hot food direction (4), normalized Manhattan distance to food (1)
 
 The DQN solvers plateau below the classical solvers on the 8x8 grid. The reward for each food piece is separated from the eventual collision by hundreds of steps, making credit assignment difficult.
-
----
-
-## Benchmarks
-
-Tested with 1000 episodes per solver. Two metrics:
-
-- **Average Length:** how far the snake grew before dying or finishing (max: 64)
-- **Average Steps:** total moves taken
-
-| Solver | Average Length | Average Steps |
-| :----: | :------------: | :-----------: |
-| Hamilton | 63.93 | 717.83 |
-| Greedy | 60.15 | 904.56 |
-| DQN (TF) | 24.44 | 131.69 |
-
-The Hamilton solver is 6% longer on average than Greedy, but uses 21% fewer steps, because shortcuts aggressively reduce wasted movement. The DQN solvers underperform both classical approaches by a wide margin.
 
 ---
 
