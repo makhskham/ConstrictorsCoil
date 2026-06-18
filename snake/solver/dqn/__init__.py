@@ -509,7 +509,8 @@ class DQNSolver(BaseSolver):
                     PointType.BODY_VER,
                 ):
                     visual_state[i - 1][j - 1][3] = 1
-                raise ValueError(f"Unsupported PointType: {t}")
+                else:
+                    raise ValueError(f"Unsupported PointType: {t}")
 
         if self._use_visual_only:
             return visual_state.flatten()
