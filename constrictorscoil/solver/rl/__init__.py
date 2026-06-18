@@ -103,7 +103,7 @@ class RLSolver(BaseSolver):
     def __init__(self, snake):
         super().__init__(snake)
         self._net = _Net()
-        self._net.load_state_dict(torch.load(_MODEL_PATH, weights_only=True))
+        self._net.load_state_dict(torch.load(_MODEL_PATH, map_location="cpu", weights_only=True))
         self._net.eval()
 
     def next_direc(self):
