@@ -1,4 +1,4 @@
-# 🐍 AI Snake Game
+# 🐍 Constrictor's Coil
 
 [![Project Presentation](https://img.shields.io/badge/Website-Behind_the_Scenes-blue)](https://aisnakegame.my.canva.site/)
 
