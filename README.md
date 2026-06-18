@@ -104,12 +104,25 @@ python run.py -s hamilton
 # Greedy
 python run.py -s greedy
 
-# DQN
+# DQN (TensorFlow, requires trained model in logs/)
 python run.py -s dqn
+
+# DQN PyTorch (requires model.pt in project root)
+python run.py -s dqn_torch
 
 # Benchmark mode (1000 episodes, no GUI)
 python run.py -s hamilton -m bcmk
 ```
+
+Train the PyTorch DQN solver:
+
+```bash
+python train.py
+# optional flags:
+python train.py --episodes 100000 --out model.pt
+```
+
+After training completes, rename the output file to `model.pt` in the project root.
 
 Run unit tests:
 
@@ -124,6 +137,7 @@ python -m pytest
 ```
 ConstrictorsCoil/
 ├── run.py               # entrypoint, CLI argument parsing
+├── train.py             # standalone PyTorch DQN training script
 ├── requirements.txt
 ├── constrictorscoil/
 │   ├── game.py          # game loop, config, modes
@@ -139,7 +153,8 @@ ConstrictorsCoil/
 │       ├── path.py      # BFS shortest path, heuristic longest path
 │       ├── greedy.py    # Greedy solver
 │       ├── hamilton.py  # Hamilton solver
-│       └── dqn/         # DQN solver and training
+│       ├── dqn/         # DQN solver (TensorFlow)
+│       └── dqn_torch/   # DQN solver (PyTorch, Double DQN)
 ├── docs/
 │   ├── algorithms.md    # algorithm writeups with diagrams
 │   └── images/          # demo GIFs, architecture diagrams

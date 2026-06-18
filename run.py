@@ -8,6 +8,7 @@ def main():
         "greedy": "GreedySolver",
         "hamilton": "HamiltonSolver",
         "dqn": "DQNSolver",
+        "dqn_torch": "DQNTorchSolver",
     }
 
     dict_mode = {
